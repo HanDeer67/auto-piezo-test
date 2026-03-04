@@ -1,0 +1,319 @@
+QMainWindow {
+    background-color: qlineargradient(
+        spread: pad,
+        x1: 0, y1: 0,
+        x2: 1, y2: 1,
+		stop: 0 #90CEF5,
+		stop: 1 #FCEAFF	
+    ); /*注意：使用这种方式修饰背景时，四个边角是无法修剪的，一直是直角*/
+	border-radius:4px; /*给ui界面的四个边角添加一个弧度，更圆润*/
+    border: 1px solid transparent;
+}
+
+/* 设置标签区域（QTabBar）的背景 */
+QTabBar {
+    background-color: transparent;  /* 使 TabBar 背景透明 */
+    border: none;  /* 移除边框 */
+}
+
+QTabWidget::pane {
+    /* background-color: transparent; */
+    background-color: rgba(255,255,255,150);
+    /* border: 1px solid gray; */
+    border: none;
+}
+
+
+QListWidget {
+    background-color: rgba(195,222,251,0); /* 标签栏背景色（浅灰，柔和）*/
+    /* border-right: 1px solid #ddd; 右侧分隔线（区分标签栏与页面） */
+    outline: none; /* 去掉选中时的虚线框*/
+    padding: 0px 0; /* 上下内边距（10px，让Item与标签栏顶部/底部有间隔）*/
+}
+
+QListWidget::item:hover {
+    background-color: qlineargradient(
+        spread: pad,
+        x1: 0, y1: 0,
+        x3: 0, y2: 1,
+		stop: 0 #90CEF5,
+		stop: 1 #FCEAFF	
+    );
+    border-left: 3px solid rgb(21,106,183);
+}
+
+QListWidget::item:checked {
+    background-color: qlineargradient(
+        spread: pad,
+        x1: 0, y1: 0, 
+        x2: 0, y2: 1,
+		stop: 0 #90CEF5,
+		stop: 1 #FCEAFF	
+    );
+    border-left: 3px solid rgb(21,106,183);
+}
+
+QListWidget::item:selected {
+    background-color: qlineargradient(
+        spread: pad,
+        x1: 0, y1: 0, 
+        x2: 0, y2: 1,
+		stop: 0 #90CEF5,
+		stop: 1 #FCEAFF	
+    );
+    border-left: 3px solid rgb(21,106,183);
+}
+
+QListWidgetItem {
+    margin: 5px 10px; /*  Item外边距（上下5px，左右10px，Item之间有间隔）*/
+    border-radius: 8px; /*  Item圆角（8px，更圆润）*/
+}
+
+/* 设置 QTabWidget 的内容区域背景透明 */
+QTabWidget{
+    background-color: rgba(255,255,255,0);   /*有效*/
+    /* background: transparent; 设置内容区域的背景为透明 */
+}
+
+QTabWidget QWidget {
+    background-color: rgba(255,255,255,0);
+}
+
+
+
+/*表格切换目录样式 */
+
+QTabBar::tab
+{ 
+	/* background:blue; */
+	background-color: rgba(255,255,255,40); /*设置每个标签页的背景为透明*/ /*有效*/
+	border-bottom: 0px solid rgba(255, 242, 251,100);
+	font-family:"微软雅黑";
+	font-size:14px;
+	padding-left:5px;
+	padding-right:5px;
+	min-width: 111px;
+	min-height:40px;		
+}
+
+/* QTabWidget#tabWidget_main > QTabBar::tab 
+{ 
+    background-color: rgba(255,255,255,40);
+    border-bottom: 0px solid rgba(255, 242, 251,100);
+    font-family:"微软雅黑";
+    font-size:14px;
+    padding-left:5px;
+    padding-right:5px;
+    min-width: 80px;
+	min-height:80px;
+} */
+
+/*表格切换目录样式*/
+QTabBar::tab:selected
+{
+    background-color: rgba(255,255,255,40);/*有效*/
+	/* border-bottom: 3px solid rgb(236,65,65); */
+    border-bottom: 3px solid rgb(21,106,183);
+	/* color: rgb(55,55,55); */
+	font-size:18px;
+	font-weight: bold;
+}
+
+/* QTabWidget#tabWidget_main > QTabBar::tab:selected 
+{ 
+    background-color: rgba(255,255,255,40);
+    border-left: 3px solid rgb(21,106,183);
+	color: rgb(55,55,55);
+	font-size:18px;
+	font-weight: bold;
+} */
+
+QPlainTextEdit{
+    background-color: rgba(255,255,255,150);
+    font-size: 10px
+}
+
+QLineEdit{
+    background-color: rgba(255,255,255,150);
+    font-size: 10px
+}
+
+QTextEdit{
+    background-color: rgba(255,255,255,150);
+    font-size: 10px
+}
+
+QLabel {
+    font-size: 10px;
+    font-family: "Times New Roman";
+    /* color: darkgray; */
+}
+
+QStatusBar QLabel {
+    font-size: 13px;
+    font-family: "Times New Roman";
+    /* color: darkgray; */
+}
+
+
+
+QGroupBox{
+    /* background: pink; */
+    background-color: rgba(255,255,255,0);
+}
+
+/*设置groupbox的标题颜色*/
+QGroupBox::title {
+    font-size: 14px;
+    font-family: "Times New Roman";
+    color: rgb(5,127,238);
+}
+
+
+QTabWidget QPlainTextEdit {
+    background-color: rgba(255, 255, 255, 40);  /* 按钮的背景色 */
+}
+
+/* 不直接使用QPushButton，需要加上其所属的容器才行 */
+QTabWidget QPushButton {
+    background-color: rgba(195,222,251,100);  /* 按钮的背景色 */
+}
+
+/*按钮样式*，注意，这个样式只能针对独立的按钮生效，比如位于QWidget中的按钮就会继承QWidget的样式而不使用该样式*/
+QPushButton{
+    font-family: "SimSun";
+    font-size: 10px;
+    color:#333333;
+    border: 1px solid #8c8c8c;
+    /* border: none;  */
+    border-radius: 3px;        /* 圆角（可选） */
+    padding: 5px;              /* 按钮内边距 */
+    /* background-color: #b2d4f5, */
+    background: none;  /* 先清除继承的背景 */
+    background-color: rgba(195,222,251,100); /* Corrected alpha value */
+}
+
+
+/*笔记：下面我刚开始使用的是QPushButton:hover,:checked，这行代码没有特指QPushButton，会导致我的checkbox也会收到影响*/
+QPushButton:hover,
+QPushButton:checked{
+    font-family: "SimSun";
+    font-size: 10px;
+    color:#333333;
+    border: 1px solid #8c8c8c; /* 按钮边框颜色 */
+    border-radius: 3px;        /* 圆角（可选） */
+    padding: 5px;              /* 按钮内边距 */
+    background-color: qlineargradient(
+        spread: pad,
+        x1: 0, y1: 0, x2: 0, y2: 1,
+		stop: 0 #b2d4f5,
+		/* stop: 0.5 #bbd4f3,  */
+		stop: 1 #d7e0fd
+    );
+}
+
+QTabWidget QLineEdit {
+    /* background-color: rgb(171, 210, 235);  下拉框的背景色 */
+    font-family: "Times New Roman","SimSun";
+    background-color: rgba(195,222,251,100);
+    font-size: 10px
+}
+
+QTabWidget QComboBox {
+    font-family: "Times New Roman";
+    /* background-color: rgb(171, 210, 235);  下拉框的背景色 */
+    background-color: rgb(195,222,251);
+    font-size: 10px
+}
+
+QComboBox{
+    background-color: rgb(195,222,251);
+    font-size: 10px
+}
+
+QComboBox QAbstractItemView {
+    background-color: rgba(195,222,251,100);
+    border: 1px solid #cccccc;  /* 下拉框边框颜色 */
+    border-radius: 3px;  
+    font-size: 10px;  /* 设置字体大小 */
+}
+
+QComboBox::item:selected {
+    background-color: rgb(171, 210, 235); /* 默认选择项的背景色 */
+    color: white; /* 默认选择项的字体颜色 */
+}
+
+QMenu {
+    background-color: white;  /* 设置菜单背景颜色 */
+    color: white;  /* 设置菜单文本颜色 */
+}
+
+QMenu::item {
+    background-color: rgb(195,222,251);  /* 设置选项的背景颜色 */
+    color: #333333;
+}
+
+QMenu::item:selected {
+    background-color: rgb(171, 210, 235);  /* 设置选中项的背景颜色 */
+    color: white;
+}
+
+
+/* QComboBox::drop-down {
+    border: 1px solid #ccc;  /* 可选，设置下拉框的边框 */
+/* }  */
+
+/* QComboBox::down-arrow { */
+    /* image: url(:/images/arrow.png);  可选，设置下拉箭头的样式 */
+/* } */
+
+/* 设置方框背景颜色，确保勾选时的对钩图标显示*/
+QCheckBox{
+	font-size: 10px;
+}
+
+QCheckBox::indicator {
+    width: 14px;
+    height: 14px;
+    border: 1px solid rgb(126, 120, 120);
+    border-radius: 2px; /* 可选，调整圆角 */
+}
+
+QCheckBox::indicator:checked {
+    /* background-color: #3c8dbc; 选中时背景颜色 */
+	width: 14px;
+    height: 14px;
+    /* border: none; 选中时的边框颜色 */
+	border: 1px solid rgb(126, 120, 120);
+	background-repeat: no-repeat;
+    background-position: center;
+	background-size: contain;
+	/* background-image: url("H:/航星代码备份/1. 上位机/2. 红外-崔启胤-光学测试系统/OpticalTestingSystem/Icon_images/checked.png");  */
+	/* background-image: url("C:/Users/P14S/Downloads/checked_resized.png"); */
+	background-image: url(":/Icon/checked_resized.png");
+	/*这行代码最好放在mainwindow.cpp中
+	直接设置，那边可以使用src的文件*/
+
+    background-color: qlineargradient(
+        spread: pad,
+        x1: 0, y1: 0, x2: 0, y2: 1,
+		stop: 0 #b2d4f5,
+		/* stop: 0.5 #bbd4f3,  */
+		stop: 1 #d7e0fd
+    );
+}
+
+QTableWidget{
+    font-size: 10px;
+    /* background-color:rgba(255,255,255,150)； */
+    background-color: rgba(255, 255, 255, 120);  /* 表格背景 */
+    alternate-background-color: rgba(255, 255, 255, 150); /* 交替行背景 */
+}
+
+QTableWidget QHeaderView::section {
+    font-size: 10px;
+    /* font-family: "SimSun"; */
+    /* font-weight: bold; */
+    background-color: #b2d4f5;
+    padding: 0px;
+}

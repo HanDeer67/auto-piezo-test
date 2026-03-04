@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>QssFiles/mainQss.qss</file>
+        <file>Icon/peach_princess_super_mario_bros_icon_232944 -mini.png</file>
+        <file>Icon/checkmark_apply_check_checked_icon_131551_32.png</file>
+        <file>Icon/checked_resized.png</file>
+    </qresource>
+</RCC>
