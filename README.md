@@ -55,6 +55,47 @@ It is designed for laboratory validation, production quality inspection, and aer
 
 ---
 
+## 📦 Dependencies
+
+Instrument Drivers (Required)
+
+This system communicates with external instruments via VISA interface.
+The following driver packages must be installed before running the software:
+
+* OpenChoiceTekVisa_Deployment_Package_066093813.exe
+  (Tektronix VISA driver)
+
+* IOLibrariesSuite-21.2.207-windows-x64.exe
+  (Keysight IO Libraries Suite)
+
+Make sure both packages are installed successfully and VISA communication is functioning properly before launching the system..
+
+---
+
+## 🔬 Test Instruments Used
+
+The current Piezo Automatic Test System is configured with the following instruments:
+
+🎛 Signal Generator
+
+* Manufacturer: Tektronix
+
+* Model: AFG1062
+
+* Function: Provides excitation voltage and waveform control for piezo devices.
+
+🔭 Autocollimator
+
+* Manufacturer: 上海光学仪器五厂有限公司
+
+* Model: 1X5-10G (1")
+
+* Type: Dual-axis photoelectric autocollimator
+
+* Function: Measures angular displacement of the piezo-driven platform.
+
+---
+
 ## 🏗 System Architecture
 
 ```
