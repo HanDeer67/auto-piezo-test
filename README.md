@@ -3,6 +3,9 @@ A Qt-based automated testing system for piezoelectric actuator performance evalu
 
 > 一套基于Qt的压电产品参数自动化测试系统，目前被应用于商业航天压电产品。主控制面板灵活设置时序、电压偏置、步进、重复次数等配置，一键启动测试流程，全程无需人工干预，直接输出测试结果。测试参数包括GB/T 38614-2020国标下的重复定位精度和线性度。
 > A Qt-based automated testing system for piezoelectric product parameters, currently applied to commercial aerospace piezoelectric devices. The main control panel allows flexible configuration of timing sequences, voltage bias, step increments, repetition counts, and other settings. The entire testing process can be initiated with a single click, requiring no manual intervention, and directly outputs the test results. Tested parameters include repeatability and linearity in accordance with the GB/T 38614-2020 national standard.
+<p align="center">
+  <img src="docs/images/imageUi.png" width="900">
+</p>
 
 ---
 
